@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: db-service
+spec:
+  type: ClusterIp
+  selector:
+    component: db
+  ports:
+    - targetPort: 3000
+      port: 80
+      protocol: "TCP"
